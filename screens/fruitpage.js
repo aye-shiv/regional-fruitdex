@@ -59,7 +59,7 @@ export default function FruitPage(props){
               {width: deviceWidth-13, height: 200, margin: 6, }]}>
               <Text style={{color: 'gray', paddingBottom: 40}}>{props.route.params.data.desc}</Text>
             </ScrollView>
-            <Text style={styles.text}>Comments</Text>
+            <Text style={styles.text}>Alt Names</Text>
             <View style={[
               tw("bg-white p-5 flex rounded-lg"),
               {width: deviceWidth-13, height: 85, margin: 6, }]}>
