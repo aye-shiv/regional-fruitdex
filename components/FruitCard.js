@@ -19,12 +19,14 @@ const FruitCard = (props) => {
             tw("bg-white p-5 flex rounded-lg"),
             {width: deviceWidth-13, height: 85}]}
             onPress={() => navigation.navigate('FruitPage', {data: fruit})}>
-             
-            <Text style={tw(" text-gray-800 font-semibold ")}>#{fruit.id} {fruit.name}</Text>
-            <Text style={tw(" text-gray-800 font-semibold ")}>{fruit.sci_name}</Text>
+            <View style= {{flexDirection: 'row'}} >
+                <Text style={{color:'#5a8d26', fontWeight:"500", fontSize: 16, marginTop: -2, marginLeft: -10}}>#{fruit.id}</Text>
+                <Text style={{color:'#104b0b', fontWeight:"700", fontSize: 18, marginLeft: 3, marginTop: -4}}>{fruit.name}</Text>
+            </View>
+            <Text style={{color:'#77816d', fontWeight:"400", fontSize: 14, marginTop: 3, marginLeft: -2}}>{fruit.sci_name}</Text>
             <Image 
                 style={[
-                tw(" absolute inset-y-0 right-0 "),
+                tw("absolute inset-y-0 right-0 rounded-lg "),
                 {width:85,height:85,resizeMode:"stretch"}]}
                 source = {{uri: fruit.img}}
             />

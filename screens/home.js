@@ -9,10 +9,8 @@ import {
   StatusBar,
   StyleSheet,
   Text,
-  useColorScheme,
   View,
   TouchableOpacity,
-  Button,
   ImageBackground,
   Dimensions,
   Image,
@@ -54,16 +52,16 @@ export default function Home(){
       <ImageBackground
         resizeMode="cover"
         style={tw("flex-1")}
-        source={{uri:"https://i.imgur.com/BkSksQP.png"}}
+        source={require('../assets/images/home_page.png')}
         >
-        <TouchableHighlight 
-          style={[
-            tw("absolute bottom-40 w-52 p-4 rounded-2xl"),
-            {marginHorizontal:"25%", backgroundColor: '#fa990e'}]}
-          onPress={() => navigation.push('Dex')}
-        >
-          <Text style={tw("font-semibold text-center")}>View FruitDex</Text> 
-        </TouchableHighlight>
+        <TouchableOpacity onPress={() => navigation.navigate('Dex')}>
+          <Image 
+            style={{width:300, height:80, resizeMode:"stretch", marginLeft:112, marginTop:380,}}
+            source={require('../assets/images/home_button.png')}/>
+        </TouchableOpacity>
+        <Image 
+            style={{width:250, height:300, resizeMode:"stretch", marginLeft:90, marginTop:-430}}
+            source={require('../assets/images/FruitDex.png')}/>
       </ImageBackground>
     </View>
     )
@@ -81,4 +79,13 @@ const styles = StyleSheet.create({
       fontSize: 50,
       fontFamily: 'sans-serif',
     },
+    dex_button:{
+      marginHorizontal:"25%", 
+      backgroundColor: '#fa990e',
+    },
+    button_text:{
+      color: "black",
+      fontWeight: '900',
+      textAlign: 'center',
+    }
   });

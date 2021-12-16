@@ -24,13 +24,12 @@ import {
 import tw from 'tailwind-rn';
 import StackNavigator from './StackNavigator';
 
+const unsubscribe = NetInfo.addEventListener(state => {
+  console.log("Is Connected", state.isConnected);
+})
+unsubscribe();
 
 const App: () => Node = () => {
-  const unsubscribe = NetInfo.addEventListener(state => {
-    console.log("Is Connected", state.isConnected);
-  })
-  unsubscribe();
-
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>

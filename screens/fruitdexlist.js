@@ -9,16 +9,17 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  useColorScheme,
   View,
   Image,
   Dimensions,
   Navigation,
+  TouchableHighlight
 } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 
 import tw from 'tailwind-rn';
 import FruitCard from '../components/FruitCard'
+import BackButton from '../components/Buttons'
 
 const deviceWidth = Math.round(Dimensions.get('window').width);
 
@@ -58,11 +59,12 @@ export default function Dex(){
     <SafeAreaView>
       <StatusBar backgroundColor="#acd8e1"/>
         <View style={[
-          tw("flex"),
-          {backgroundColor: '#acd8e1', width: "100%", height: 80, justifyContent: 'center'}]}>
+          tw(""),
+          {backgroundColor: '#acd8e1', width: "100%", height: 80, flexDirection: 'row'}]}>
+          <BackButton/>
           <Image
             style={[tw("self-center"),
-              {flex:1, width: '100%', height: '100%', resizeMode: "contain", margin: 10,}]}
+              {width: '70%', height: '70%', resizeMode: "contain",marginLeft:24}]}
             source = {require('../assets/images/fruitdex_text.png')}
           />
         </View>
@@ -120,5 +122,12 @@ const styles = StyleSheet.create({
       color: 'black',
       fontFamily: 'sans-serif',
       fontSize: 15
+    },
+    back_button:{
+      height: 30, 
+      width: 30,
+      marginTop:30,
+      marginLeft:10,
+      position: 'absolute',
     }
   });
