@@ -8,8 +8,6 @@ import {Provider} from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
 import {store, persistor} from './util/store'
 import NetInfo from '@react-native-community/netinfo';
-
-
 import {
   Alert,
   SafeAreaView,
@@ -23,6 +21,10 @@ import {
 
 import tw from 'tailwind-rn';
 import StackNavigator from './StackNavigator';
+
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['new NativeEventEmitter']);
+LogBox.ignoreAllLogs();
 
 const unsubscribe = NetInfo.addEventListener(state => {
   console.log("Is Connected", state.isConnected);

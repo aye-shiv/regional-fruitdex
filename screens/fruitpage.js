@@ -101,10 +101,6 @@ export default function FruitPage(props){
                 <Text style={{color: '#77816d',borderWidth: 0.9, borderRadius: 5, borderColor: "#5a8d26", padding: 4 }}>{props.route.params.data.alt_name}</Text>
               </View>
             </View>
-            <View style={[
-              tw("bg-white p-5 flex rounded-lg"),
-              {width: deviceWidth-13, height: 85, margin: 6, }]}>
-            </View>
           </ScrollView>
         </ImageBackground>
       </View>
