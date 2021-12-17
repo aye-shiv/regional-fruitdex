@@ -56,7 +56,7 @@ export default function Home(){
         >
         <TouchableOpacity onPress={() => navigation.navigate('Dex')}>
           <Image 
-            style={{width:300, height:80, resizeMode:"stretch", marginLeft:112, marginTop:380,}}
+            style={{width:"72%", height:80, resizeMode:"stretch", marginLeft:112, marginTop:380,}}
             source={require('../assets/images/home_button.png')}/>
         </TouchableOpacity>
         <Image 
