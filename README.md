@@ -39,6 +39,5 @@ Once set up properly, you can just type `npm run test` which will run the tests 
 
 ## Troubleshooting
 * If you're still unable to run the application through the repo, it may be due to a discrepancy in node version, use node -v to ensure you are at most v16.13.0
-* Ensure that ENVIRONMENT_VARIABLES are properly configured on system: 
-`ANDROID_HOME: %LOCALAPPDATA%\Android\Sdk` `ANDROID_PLATFORM_TOOLS: C:\Users\%USER%\AppData\Local\Android\Sdk\platform-tools`
+* Ensure that ENVIRONMENT_VARIABLES are properly configured on system: `ANDROID_HOME: %LOCALAPPDATA%\Android\Sdk` `ANDROID_PLATFORM_TOOLS: C:\Users\%USER%\AppData\Local\Android\Sdk\platform-tools`
 
