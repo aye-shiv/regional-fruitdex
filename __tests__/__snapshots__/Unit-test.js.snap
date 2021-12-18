@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dexReducer handles the getFruit action 1`] = `Object {}`;
+
+exports[`dexReducer returns the initial state 1`] = `
+Object {
+  "fruits": Array [],
+}
+`;
