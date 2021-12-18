@@ -32,7 +32,7 @@ Starts metro and opens the application on any connected android device (emulator
 ### `npm run ios`
 Starts metro and opens the application on any connected iOS emulators or iPhones(requires xCode).
 ### `npm run start`
-Starts the metro within whatever terminal its entered in
+Starts the metro within whatever terminal its entered in; note this just opens the metro, you will still have to `run android/ios`
 
 ## Running Tests
 Once set up properly, you can just type `npm run test` which will run the tests using the jest library.
