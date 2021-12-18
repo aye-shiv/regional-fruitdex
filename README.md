@@ -19,15 +19,24 @@ We developed and deployed our own API to have full control of the information wh
 * [Troubleshooting](#troubleshooting)
 
 ## Requirements
+* Node v16.13.0 (Newer available releases don't facilitate required packages)
+* Either  a {iOS device or Android device} or {iOS emulator via xCode or Android emulator via Android Studio}
 
 ## Setup
+Open a terminal from within the repo and type `npm install` to install the required node_modules and generate your package.lock,
+NOTE: you can also use `yarn install`, it's entirely your choice. Once the .lock file is generated you may use any of the builder scripts.
 
 ## Main Scripts
 ### `npm run android`
+Starts metro and opens the application on any connected android device (emulator or physical device).
 ### `npm run ios`
+Starts metro and opens the application on any connected iOS emulators or iPhones(requires xCode).
 ### `npm run start`
-### `npm run test`
+Starts the metro within whatever terminal its entered in
 
 ## Running Tests
+Once set up properly, you can just type `npm run test` which will run the tests using the jest library.
 
 ## Troubleshooting
+* If you're still unable to run the application through the repo, it may be due to a discrepancy in node version, use node -v to ensure you are at most v16.13.0
+* Ensure that paths are properly configured: `ANDROID_HOME: %LOCALAPPDATA%\Android\Sdk` `ANDROID_PLATFORM_TOOLS: C:\Users\%USER%\AppData\Local\Android\Sdk\platform-tools`
